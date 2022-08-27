@@ -11,11 +11,11 @@ mkdir -p "$HOME/$ANDROID_DIR/" && mkdir -p "$HOME/$ANDROID_DIR/cmdline-tools/"
 wget -nv "https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip" -O commandlinetools.zip
 unzip commandlinetools.zip -d "$HOME/$ANDROID_DIR/cmdline-tools" && mv "$HOME"/$ANDROID_DIR/cmdline-tools/{cmdline-,}tools && rm -f commandlinetools.zip
 
-# JDK version (can be changed)
-JDK_VERSION="11.0.14"
+# JDK version
+JDK_VERSION="11.0.15"
 
 # install JDK
-wget -nv "https://files02.tchspt.com/temp/jdk-${JDK_VERSION}_linux-x64_bin.tar.gz" -O jdk-11.tar.gz
+wget -nv "https://cfdownload.adobe.com/pub/adobe/coldfusion/java/java11/java11015/jdk-${JDK_VERSION}_linux-x64_bin.tar.gz" -O jdk-11.tar.gz
 mkdir -p "$HOME/$ANDROID_DIR/jdk" && tar -zxvf jdk-11.tar.gz -C "$HOME/$ANDROID_DIR/jdk/" && rm -rf jdk-11.tar.gz
 
 # install ANDROID NDK
